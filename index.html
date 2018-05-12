@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!--Mobile Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" sizes="any" type="image/x-icon" href="logo.ico">
+
+    <!--Style Sheets-->
+    <link rel="stylesheet" href="master.css">
+
+    <title>
+      JavaScript Puzzle
+    </title>
+  </head>
+
+  <body>
+
+    <fieldset>
+      <legend id="title">
+          Puzzle
+      </legend>
+
+      <div id="puzzle" class="container">
+        <div id="1" class="box sha" onclick="active('1')"><div class="tile" id="tile1"></div></div>
+        <div id="2" class="box sha" onclick="active('2')"><div class="tile" id="tile2"></div></div>
+        <div id="3" class="box sha" onclick="active('3')"><div class="tile" id="tile3"></div></div><br>
+        <div id="4" class="box sha" onclick="active('4')"><div class="tile" id="tile4"></div></div>
+        <div id="5" class="box sha" onclick="active('5')"><div class="tile" id="tile5"></div></div>
+        <div id="6" class="box sha" onclick="active('6')"><div class="tile" id="tile6"></div></div><br>
+        <div id="7" class="box sha" onclick="active('7')"><div class="tile" id="tile7"></div></div>
+        <div id="8" class="box sha" onclick="active('8')"><div class="tile" id="tile8"></div></div>
+        <div id="9" class="box sha" onclick="active('9')"><div class="tile" id="tile9"></div></div><br>
+        <div class="box"><button class="hint" onclick="hint();">How to play???</button></div>
+        <div class="box"><button class="swap-btn" id="swap">SWAP</button></div>
+        <p id="move" class="box"></p>
+      </div>
+
+    <div class="container" id="instruc">
+      <a class="cls-btn-instru" href="javascript:void(0)" onclick="hide();">&times;</a>
+      <ul>
+        <li>Select any two tiles and hit the SWAP button to swap their positions.</li>
+        <li>Continue swapping until you achieve following configuration of tiles.</li>
+        <li style="text-align: center;"><img src="final.png" alt="Final Configuration" width="210px" height="210px"></li>
+        <li style="color: red;">On selecting more than two tiles previously selected tiles gets unselected.</li>
+      </ul>
+    </div>
+  </fieldset>
+
+    <div class="final" id="final">
+        <p id="msg"></p>
+        <a class="cls-btn" href="javascript:void(0)" onclick="result();">&times;</a>
+        <button type="button" name="button" id="new-game" onclick="restart();">Restart</button>
+    </div>
+
+    <!--Javascripts-->
+    <script src="random.js" charset="utf-8"></script>
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
